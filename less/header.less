@@ -1,0 +1,69 @@
+// Хэдер
+.page-header {
+  height: 400px;
+  background: url(../img/title.svg) center 80px, url(../img/intro.jpg) -430px 0;
+  background-repeat: no-repeat;
+  background-size: 300px, auto;
+  position: relative;
+}
+.page-header__triangle {
+  background:  url(../img/triangle.svg) no-repeat center;
+  background-size: cover;
+  position: absolute;
+  bottom: -1px;
+  height: 80px;
+  width: 100%;
+}
+
+// Контент
+.page-wrapper {
+  margin-top: 40px;
+}
+.page-wrapper__information {
+  position: relative;
+  background-size: cover;
+}
+.page-wrapper__title {
+  font-size: 1.3em;
+  text-align: center;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+.page-wrapper__description {
+  font-size: 1.05em;
+  margin-top: 20px;
+  padding: 0 20px;
+  text-transform: uppercase;
+}
+
+@media screen and(min-width: 1280px) {
+  .page-header {
+    height: 530px;
+  }
+  .page-header__triangle {
+    background:  url(../img/triangle.svg) no-repeat center;
+    background-size: contain;
+    position: absolute;
+    bottom: -12px;
+    height: 80px;
+    width: 100%;
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .page-header {
+    height: 500px;
+    background: url(../img/title.svg) center 80px, url(../img/intro.jpg) 0 0;
+    background-repeat: no-repeat;
+    background-size: 480px, cover;
+    position: relative;
+  }
+  .page-header__triangle {
+    background:  url(../img/triangle.svg) no-repeat center 101%;
+    background-size: 155%;
+    position: absolute;
+    bottom: 0;
+    height: 140px;
+    width: 100%;
+  }
+}

@@ -1,0 +1,103 @@
+doctype
+html(lang="ru")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Document
+  body
+    nav.main-nav
+        a(href="index.html")
+          img.main-nav__logo-mobile(src="img/mobile-logo.svg" height="60")
+        button.main-nav__toggle(type="button") Открыть меню
+        ul.main-nav__navigation.site-list
+          li.site-list__item.style-list__item--active
+            a(href="#") Главная
+          li.site-list__item
+            a(href="#") Фото и видео
+          li.site-list__item.logo
+            a(href="index.html")
+              img.site-list__logo-image(src="img/logo.svg" height="80")
+          li.site-list__item
+            a(href="#") Форма отзыва
+          li.site-list__item
+            a(href="#") Html academy
+    header.page-header
+      .header__intro(style="background:url(img/intro.jpg) no-repeat;background-size:cover;")
+        img(src="img/title.svg" alt="" height="500")
+
+    main.page-wrapper
+      section.page-wrapper__content
+        section.page-wrapper__information
+          h1.page-wrapper__title Седона - небольшой городок в Аризоне, заслуживающий большего!
+          p.page-wrapper__description Рассмотрим 5 причин, по которым седона круче чем Гранд Каньон!
+        section.page-wrapper__list-container
+          ul.page-wrapper__list.wecool
+            li.wecool__list-element--real-city
+
+              section.wecool__section--blue.list-block
+                h2.list-block__title--white Настоящий городок
+                span.list-block__number--white №1
+                p.list-block__description--white
+                  |Седона не аттракцион для туристов, там течет своя жизнь
+
+              section.wecool__section--image
+
+              section.wecool__section.list-block
+                img.list-block__icon(src="img/house.svg" height="40")
+                h3.list-block__title Жилье
+
+              section.wecool__section.list-block
+                img.list-block__icon(src="img/burger.svg" height="40")
+                h3.list-block__title Еда
+
+              section.wecool__section.list-block
+                img.list-block__icon(src="img/gift.svg" height="40")
+                h3.list-block__title Сувениры
+
+
+            li.wecool__list-element--devil
+              section.wecool__section--image
+
+              section.wecool__section--blue.list-block
+                h2.list-block__title--white Там есть Мост Дьявола
+                span.list-block__number--white №2
+                p.list-block__description--white
+                  |Да, по нему можно пройти! Если вы осмелитесь, конечно
+
+
+            li.wecool__list-element.list-block
+              h2.list-block__title Небольшая площадь
+              span.list-block__number №3
+              p.list-block__description
+                |Все интересные места находятся очень близко
+
+
+            li.wecool__list-element.list-block
+              h2.list-block__title Красивая дорога
+              span.list-block__number №4
+              p.list-block__description
+                |Ехать в Седону из Лас-Вегаса совсем не скучно!
+
+
+            li.wecool__list-element.list-block
+              h2.list-block__title Мало туристов
+              span.list-block__number №5
+              p.list-block__description
+                |Большинство едет в Гранд Каньон и толпится там
+
+
+        section.page-wrapper__map-section.map-block
+          .map-block__interesting
+            h3.map-block__title Заинтересовались?
+            p Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне
+            button.map-block__button Найти гостиницу
+          .map-block__map
+
+    footer.page-footer
+      section.page-footer__hashtag #VISITSEDONA
+      section.page-footer__socials
+        a(href="#")  Иконка твиттера
+        a(href="#")  Иконка фэйсбука
+        a(href="#")  Иконка ютуба
+      section.page-footer__copyright Разработано академией

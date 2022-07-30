@@ -1,0 +1,206 @@
+.list-block {
+  text-align: center;
+  padding: 60px 15px;
+  margin-top: 25px;
+  text-transform: uppercase;
+}
+.list-block__number {
+  line-height: 4.5em;
+}
+.list-block__number--white {
+  line-height: 4.5em;
+}
+
+.list-element:nth-child(even) {
+  list-style: none;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: inline-block;
+    height: 1px;
+    width: 80%;
+    background: #d6d6d6;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: inline-block;
+    height: 1px;
+    width: 80%;
+    background: #d6d6d6;
+  }
+}
+.wecool__list-element {
+  background-color: #eeeeee;
+  margin-top: 0;
+}
+.wecool__section--blue {
+  background: #81b3d2;
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+.wecool__section--blue--white {
+    background: #81b3d2;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    padding: 80px 0 45px;
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 50px;
+      background-image: url(../img/triangle.png);
+      background-position: center -10px;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+}
+
+.wecool__section--icon-block {
+  padding: 10px 0;
+  position: relative;
+  min-width: 210px;
+  width: 50%;
+  margin-left: 24%;
+  text-align: left;
+}
+.list-block__icon--hard {
+  position: absolute;
+  top: -10px;
+  left: -60px;
+  height: 40px;
+}
+.list-block__title--hard {
+  margin-bottom: 20px;
+}
+.wecool__image--one {
+  height: 300px;
+  width: 100%;
+  background-image: url(../img/real-city.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.wecool__image--two {
+  height: 300px;
+  width: 100%;
+  background-image: url(../img/devil-most.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.list-block__title {
+  font-size: 1.5em;
+}
+
+@media screen and(min-width: 768px) {
+  .page-wrapper__information {
+    text-align: center;
+  }
+  .wecool__section--blue {
+    &.second {
+      order: 1;
+    }
+  }
+  .wecool__section--blue--white {
+    padding: 50px 0;
+    &::before {
+      display: none;
+    }
+  }
+  .wecool__list-element--real-city {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  .wecool__list-element--devil {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+  }
+
+  .list-block {
+    flex-basis: 33%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &.second {
+      padding: 0;
+    }
+  }
+  .list-block__content {
+    max-width: 300px;
+    align-content: stretch;
+    padding: 0 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wecool__image--one,
+  .wecool__image--two {
+    flex-basis: 67%;
+    background-size: cover;
+  }
+  .wecool__image--two {
+    order: 0;
+  }
+
+  .wecool__flex {
+    width: 100%;
+    align-items: flex-start;
+    display: flex;
+    justify-content: space-around;
+  }
+  .wecool__section--icon-block {
+    margin-top: 30px;
+    margin-left: 0;
+    max-width: 256px;
+    text-align: center;
+  }
+  .list-block__icon--hard {
+    position: static;
+    height: 70px;
+  }
+  .list-block__title--hard {
+    font-size: 1.5em;
+    margin-top: 20px;
+  }
+  .list-element {
+    background: none;
+  }
+  .list-element:nth-child(even) {
+    list-style: none;
+    position: relative;
+    &::before {
+      display: none;
+    }
+    &::after {
+      display: none;
+    }
+  }
+
+  .wecool__ul {
+    display: flex;
+    align-items: flex-start;
+    background: #ededed;
+  }
+  .list-block__title {
+    font-size: 1.3em;
+  }
+}

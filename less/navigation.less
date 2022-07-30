@@ -1,0 +1,179 @@
+// Навигация
+.main-nav {
+  position: relative;
+
+  display: block;
+  width: 100%;
+  z-index: 3;
+}
+.main-nav__toggle {
+  @size: 30px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+  background: none;
+  border: none;
+  background-image: url(../img/open.svg);
+  background-size: cover;
+  height: @size;
+  width: @size;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.main-nav__toggle--close {
+  @size: 26px;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 20px;
+  background: none;
+  border: none;
+  background-image: url(../img/close.svg);
+  height: @size;
+  width: @size;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+// Менюшка
+.site-list__item {
+  background: #81b3d2;
+  text-align: center;
+  list-style: none;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+  position: relative;
+  display: block;
+  .button;
+}
+.site-list__item--active {
+  background: #81b3d2;
+  text-align: center;
+  list-style: none;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+  position: relative;
+  display: none;
+  font-weight: 700;
+}
+.site-list__link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1.5em;
+  width: 100%;
+  display: block;
+  padding: 10px 0;
+}
+.site-list__logo {
+  height: 58px;
+  position: relative;
+}
+
+.logo__link {
+  display: block;
+  width: 102px;
+  height: 83px;
+  margin: 0 auto;
+  picture {
+    img {
+      width: 102px;
+    }
+  }
+}
+
+@media screen and(min-width: 1280px) {
+  .site-list__logo {
+    width: 160px;
+    .logo__link {
+      width: 160px;
+      img {
+        width: 160px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-nav {
+    position: relative;
+
+    display: block;
+    width: 100%;
+    z-index: 3;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+  .main-nav__toggle--close {
+    display: none;
+  }
+
+  .site-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  .site-list__item--active {
+    background: none;
+    text-align: left;
+    list-style: none;
+    border-top: none;
+    border-bottom: none;
+    position: relative;
+    display: block;
+    text-transform: uppercase;
+    &.item {
+      width: 20%;
+      flex-shrink: 0;
+      text-align: center;
+    }
+    &.first {
+      order: 0;
+    }
+    &.second {
+      order: 1;
+    }
+    &.three {
+      order: 3;
+    }
+    &.four {
+      order: 4;
+    }
+  }
+  .site-list__link {
+    text-decoration: none;
+    color: #000000;
+    font-size: 1em;
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+    line-height: 34px;
+    &:hover {
+      color: #dae7f1;
+    }
+    &:active {
+      color: #cacaca;
+    }
+    &--active {
+      color: #766357;
+      &:hover {
+        color: #604e43;
+      }
+      &:active {
+        color: #dbd8d5;
+      }
+    }
+  }
+  .site-list__logo {
+    height: 58px;
+    position: sticky;
+    list-style: none;
+    order: 2;
+  }
+}
